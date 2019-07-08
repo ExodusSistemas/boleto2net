@@ -3,8 +3,13 @@
 [![Issues open](https://img.shields.io/github/issues/BoletoNet/boleto2net.svg)](https://huboard.com/BoletoNet/boleto2net/)
 [![Coverage Status](https://coveralls.io/repos/github/BoletoNet/boleto2net/badge.svg?branch=master)](https://coveralls.io/github/BoletoNet/boleto2net?branch=master)
 
-# boleto2net
-Nova versão do Boleto.Net
+# boleto2net para .NET CORE 2.2
+Fork da Nova versão do Boleto.Net com as seguintes alterações fundamentais:
+**  Sem .resx => Nova estrutura de arquivos 
+**  Suporte a PDF Nativo em projeto separado boleto2net.pdf - Biblioteca PDF embarcada (wkhtmltopdf.exe)
+**  Netstandard 2.2
+**  Nenhuma dependência de controles do da System.Web
+**  Compliance com a Boleto2NetProxy
 
 ### Carteiras Homologadas
 * Banrisul - Carteira 1

@@ -422,7 +422,7 @@ namespace Boleto2Net
                 .Replace("@ACEITE", Boleto.Aceite).ToString()
                 .Replace("@ENDERECOCEDENTE_BOLETO", MostrarEnderecoCedente ? string.Format(" - {0}", enderecoCedenteCompacto) : "")
                 .Replace("@ENDERECOCEDENTE", MostrarEnderecoCedente ? enderecoCedente : "")
-                .Replace("@INSTRUCOES", Boleto.MensagemInstrucoesCaixaFormatado.Replace("\r\n", "<br/>"));
+                .Replace("@INSTRUCOES", Boleto.MensagemInstrucoesCaixaFormatado.Replace(Environment.NewLine, "<br/>"));
         }
 
         #endregion Html
@@ -818,14 +818,15 @@ namespace Boleto2Net
         /// <summary>
         /// Monta o Html do boleto bancário com as imagens embutidas no conteúdo, sem necessidade de links externos
         /// de acordo com o padrão http://en.wikipedia.org/wiki/Data_URI_scheme
+        /// 
+        /// Alterado por Olavo Rocha @ Exodus para utilizar arquivos dentro da própria DLL para .net core 2.2
         /// </summary>
         /// <param name="convertLinhaDigitavelToImage">Converte a Linha Digitável para imagem, com o objetivo de evitar malwares.</param>
         /// <param name="urlImagemLogoCedente">Url/Imagem Base64 da Logo do Cedente</param>
         /// <returns>Html do boleto gerado</returns>
-        /// <desenvolvedor>Iuri André Stona</desenvolvedor>
+        /// <desenvolvedor>Iuri André Stona, Olavo Rocha Neto</desenvolvedor>
         /// <criacao>23/01/2014</criacao>
-        /// <alteracao>08/08/2014</alteracao>
-
+        /// <alteracao>07/07/2019</alteracao>
         public string MontaHtmlEmbedded(bool convertLinhaDigitavelToImage = false, bool usaCsspdf = false, string urlImagemLogoCedente = null)
         {
             //OnLoad(EventArgs.Empty);

@@ -64,32 +64,32 @@ namespace Boleto2Net
             //JUROS
             if (boleto.ImprimirValoresAuxiliares == true && boleto.ValorJurosDia > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"JRS: Vl p/ Dia Atraso - {boleto.ValorJurosDia.ToString("N2")} APÓS {boleto.DataJuros.ToString("dd/MM/yyyy")}\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"JRS: Vl p/ Dia Atraso - {boleto.ValorJurosDia.ToString("N2")} APÓS {boleto.DataJuros.ToString("dd/MM/yyyy")}{Environment.NewLine}";
             }
             if (boleto.ImprimirValoresAuxiliares == true && boleto.PercentualJurosDia > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"JRS:Cobrar juros de {boleto.PercentualJurosDia.ToString("N2")}% ao dia APÓS {boleto.DataJuros.ToString("dd/MM/yyyy")}\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"JRS:Cobrar juros de {boleto.PercentualJurosDia.ToString("N2")}% ao dia APÓS {boleto.DataJuros.ToString("dd/MM/yyyy")}{Environment.NewLine}";
             }
 
             //MULTA
             if (boleto.ImprimirValoresAuxiliares == true && boleto.ValorMulta > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"MULTA DE R$ {boleto.ValorMulta.ToString("N2")} APOS {boleto.DataMulta.ToString("dd/MM/yyyy")}\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"MULTA DE R$ {boleto.ValorMulta.ToString("N2")} APOS {boleto.DataMulta.ToString("dd/MM/yyyy")}{Environment.NewLine}";
             }
             if (boleto.ImprimirValoresAuxiliares == true && boleto.PercentualMulta > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"MULTA DE {boleto.PercentualMulta.ToString("N2")} % A PARTIR DE {boleto.DataMulta.ToString("dd/MM/yyyy")}\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"MULTA DE {boleto.PercentualMulta.ToString("N2")} % A PARTIR DE {boleto.DataMulta.ToString("dd/MM/yyyy")}{Environment.NewLine}";
             }
 
             //DESCONTO
             if (boleto.ImprimirValoresAuxiliares == true && boleto.ValorDesconto > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"DESCONTO DE R$ {boleto.ValorDesconto.ToString("N2")} ATÉ {boleto.DataDesconto.ToString("dd/MM/yyyy")}\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"DESCONTO DE R$ {boleto.ValorDesconto.ToString("N2")} ATÉ {boleto.DataDesconto.ToString("dd/MM/yyyy")}{Environment.NewLine}";
             }
 
             if (boleto.ImprimirValoresAuxiliares == true && boleto.MensagemInstrucoesCaixa?.Length > 0)
             {
-                boleto.MensagemInstrucoesCaixaFormatado += $"//////////////////////////////\r\n";
+                boleto.MensagemInstrucoesCaixaFormatado += $"//////////////////////////////{Environment.NewLine}";
                 boleto.MensagemInstrucoesCaixaFormatado += boleto.MensagemInstrucoesCaixa;
             }
 

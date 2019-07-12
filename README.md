@@ -5,11 +5,11 @@
 
 # boleto2net para .NET CORE 2.2
 Fork da Nova versão do Boleto.Net com as seguintes alterações fundamentais:
-**  Sem .resx => Nova estrutura de arquivos 
-**  Suporte a PDF Nativo em projeto separado boleto2net.pdf - Biblioteca PDF embarcada (wkhtmltopdf.exe)
-**  Netstandard 2.2
-**  Nenhuma dependência de controles do da System.Web
-**  Compliance com a Boleto2NetProxy
+*  Sem .resx => Nova estrutura de arquivos 
+*  Suporte a PDF Nativo em projeto separado boleto2net.pdf - Biblioteca PDF embarcada (wkhtmltopdf.exe)
+*  Netstandard 2.2
+*  Nenhuma dependência de controles do da System.Web
+*  Compliance com a Boleto2NetProxy
 
 ### Carteiras Homologadas
 * Banrisul - Carteira 1
